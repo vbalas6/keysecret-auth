@@ -6,6 +6,10 @@ A wrapper around the Hawk authentication framework.
 
 # Browser
 
+Please note this example does take into account the mechanism for obtaining or transmitting the set of shared credentials required.
+https://github.com/hueniverse/hawk#mac-keys-transmission
+
+
     <script src="/dist/browser.js"></script>
 
 Then
