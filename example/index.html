@@ -29,7 +29,8 @@
 
       var url = 'http://localhost:3000/api/test';
       var header = keySecret.client.header(url, 'GET', {
-        credentials: credentials
+        credentials: credentials,
+        schemeName : 'Pearson'
       });
 
       it('GET request should succeed', function(done) {

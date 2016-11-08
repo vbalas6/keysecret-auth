@@ -32,12 +32,16 @@ var getCredentials = function(id, callback) {
   return callback(null, credentials[id]);
 };
 
-server.register(require('keysecret-auth').scheme, function(err) {
+
+//  Register defining scheme name
+server.register({
+    register: require('../index.js').scheme,
+    options: { schemeName: 'Pearson' }
+  }, function(err) {
   server.auth.strategy('keySecret', 'keySecret', {
     getCredentialsFunc: getCredentials
   });
 });
-
 
 
 /* Routes  */

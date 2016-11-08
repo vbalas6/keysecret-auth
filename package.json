@@ -1,6 +1,6 @@
 {
   "name": "keysecret-auth",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Client and server libraries to manage Key/Secret authentication.  Effectivaly a basic wrapper around the Hawk authentication library",
   "main": "index.js",
   "scripts": {
@@ -22,12 +22,12 @@
     "gulp-rename": "^1.2.2",
     "gulp-replace": "^0.5.4",
     "hapi": "~10.0.0",
-    "inert": "^4.0.2",
-    "keysecret-auth": "git+ssh://github.com/PearsonTech/keysecret-auth.git"
+    "inert": "^4.0.2"
   },
   "dependencies": {
     "boom": "^3.1.2",
     "hawk": "^4.1.2",
-    "hoek": "^3.0.4"
+    "hoek": "^3.0.4",
+    "vinyl-source-stream": "^1.1.0"
   }
 }

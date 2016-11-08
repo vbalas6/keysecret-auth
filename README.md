@@ -32,10 +32,12 @@ Then can add to your request headers
 
     var schemeName = 'KeySecretScheme'
 
-    server.register(require('keysecret-auth').scheme, function (err) {
-      server.auth.strategy(schemeName, 'keySecret', isKeySecret);
+    server.register({
+      register: require('keysecret-auth').scheme,
+      options: { schemeName: schemeName }
+    }, function (err) {
+      server.auth.strategy('keySecret', 'keySecret', isKeySecret);
     });
-
 
 # Example
 
