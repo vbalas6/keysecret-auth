@@ -30,10 +30,10 @@ Then can add to your request headers
 
 # Server
 
-    var schemaName = 'KeySecretSchema'
+    var schemeName = 'KeySecretScheme'
 
     server.register(require('keysecret-auth').scheme, function (err) {
-      server.auth.strategy(schemaName, 'keySecret', isKeySecret);
+      server.auth.strategy(schemeName, 'keySecret', isKeySecret);
     });
 
 
