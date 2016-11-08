@@ -20,9 +20,9 @@ Then
       algorithm: 'sha256'
     }
 
-    var appKey = 'applicationKey'
+    var schemeName = 'KeySecretScheme'
 
-    var header = keySecret.client.header(URL, METHOD, { credentials: credentials, appKey : appKey });
+    var header = keySecret.client.header(URL, METHOD, { credentials: credentials, schemeName : schemeName });
 
 Then can add to your request headers
 
