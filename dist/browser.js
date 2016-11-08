@@ -10,7 +10,7 @@ keySecret.client = {
     header: function header(uri, method, options) {
 
         //  Remap key/secret for hawk
-				var appKey = options.appKey || 'KeySecret Key';
+        var appKey = options.appKey || 'KeySecret Key';
         options.credentials.id = options.credentials.key;
         options.credentials.key = options.credentials.secret;
 
