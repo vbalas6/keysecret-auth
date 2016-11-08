@@ -20,7 +20,7 @@ Then
       algorithm: 'sha256'
     }
 
-		var appKey = 'applicationKey'
+    var appKey = 'applicationKey'
 
     var header = keySecret.client.header(URL, METHOD, { credentials: credentials, appKey : appKey });
 
