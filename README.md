@@ -20,7 +20,9 @@ Then
       algorithm: 'sha256'
     }
 
-    var header = keySecret.client.header(URL, METHOD, { credentials: credentials });
+    var schemeName = 'KeySecretScheme'
+
+    var header = keySecret.client.header(URL, METHOD, { credentials: credentials, schemeName : schemeName });
 
 Then can add to your request headers
 
@@ -28,8 +30,10 @@ Then can add to your request headers
 
 # Server
 
+    var schemeName = 'KeySecretScheme'
+
     server.register(require('keysecret-auth').scheme, function (err) {
-      server.auth.strategy('keySecret', 'keySecret', isKeySecret);
+      server.auth.strategy(schemeName, 'keySecret', isKeySecret);
     });
 
 
